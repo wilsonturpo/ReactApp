@@ -3,9 +3,11 @@ import Part from './Part'
 
 const Content = (props) => {
 
-    //Recorremos el array de objetos de partes y enviamos los props al componente Part
-    //Luego renderizamos el objeto que contiene todas las partes
-    const listItems = props.parts.map((element, index) =>
+    //Desestructuramos las partes para trabajarlas directamente
+    const {parts} = props.course
+    
+    //Recorremos los objetos del arreglo parts para asignar los campos al componente Part
+    const listItems = parts.map((element, index) =>
         <Part key={index} parte={element.name} numEjercicios={element.exercises} />
     );
     return (

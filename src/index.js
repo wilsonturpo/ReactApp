@@ -6,7 +6,7 @@ import Total from './components/Total'
 
 const App = () => {
 
-  const course = 'Desarrollo de Aplicaciones Avanzadas'
+  const course = 'Half Stack application development'
 
   const part1 = 'Fundamentals of React'
   const exercises1 = 10
@@ -21,9 +21,7 @@ const App = () => {
     <div>
       <Header course={course} />
 
-      <Content parte={part1} numEjercicios={exercises1} />
-      <Content parte={part2} numEjercicios={exercises2} />
-      <Content parte={part3} numEjercicios={exercises3} />
+      <Content/>
 
       <Total total={exercises1 + exercises2 + exercises3} />
       

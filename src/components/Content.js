@@ -1,25 +1,18 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 import Part from './Part'
 
-const part1 = 'Fundamentals of React'
-const exercises1 = 10
+const Content = (props) => {
 
-const part2 = 'Using props to pass data'
-const exercises2 = 7
-
-const part3 = 'State of a component'
-const exercises3 = 14
-
-const Content = () => {
-  return (
-    <div>
-      <Part  parte={part1} numEjercicios={exercises1} />
-      <Part  parte={part2} numEjercicios={exercises2} />
-      <Part  parte={part3} numEjercicios={exercises3} />
+    //Recorremos el array de objetos de partes y enviamos los props al componente Part
+    //Luego renderizamos el objeto que contiene todas las partes
+    const listItems = props.parts.map((element, index) =>
+        <Part key={index} parte={element.name} numEjercicios={element.exercises} />
+    );
+    return (
+    <div>        
+        {listItems}
     </div>
-  )
+    )
 }
 
 export default Content
-

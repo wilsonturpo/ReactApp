@@ -1,5 +1,4 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 
 const Header = (props) => {
   return (
@@ -10,4 +9,3 @@ const Header = (props) => {
 }
 
 export default Header
-

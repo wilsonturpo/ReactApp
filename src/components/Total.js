@@ -1,13 +1,13 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 
 const Total = (props) => {
-  return (
+
+    const sumaTotal = props.total.reduce((prev, next) => prev + next.exercises, 0);
+    return (
     <div>
-      <p>Number of exercises: {props.total}</p>
+        <p>Number of exercises: {sumaTotal}</p>
     </div>
-  )
+    )
 }
 
 export default Total
-
